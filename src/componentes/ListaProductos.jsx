@@ -1,14 +1,11 @@
+// 📁 src/componentes/ListaProductos.jsx
+import ProductoItem from "./ProductoItem";
+
 function ListaProductos({ productos }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {productos.map((producto) => (
-        <div
-          key={producto.id}
-          className="border p-4 m-2 rounded shadow bg-white hover:shadow-lg transition-shadow"
-        >
-          <h2 className="text-xl font-semibold mb-2">{producto.title}</h2>
-          <p className="text-green-700 font-bold">Precio: ${producto.price}</p>
-        </div>
+        <ProductoItem key={producto.id} producto={producto} />
       ))}
     </div>
   );
