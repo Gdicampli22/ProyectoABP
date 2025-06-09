@@ -1,14 +1,19 @@
-// 📁 src/componentes/ListaProductos.jsx
+// ListaProductos.jsx
+import React from "react";
 import ProductoItem from "./ProductoItem";
 
-function ListaProductos({ productos }) {
+const ListaProductos = ({ productos }) => {
+  if (productos.length === 0) {
+    return <p className="text-center text-red-500">No se encontraron productos.</p>;
+  }
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {productos.map((producto) => (
         <ProductoItem key={producto.id} producto={producto} />
       ))}
-    </div>
+    </section>
   );
-}
+};
 
 export default ListaProductos;
