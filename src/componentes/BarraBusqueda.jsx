@@ -16,9 +16,15 @@ const BarraBusqueda = ({
     "smartphones",
     "laptops",
     "fragrances",
-    "skincare",
     "groceries",
     "home-decoration",
+    "Beauty",
+    "Furniture",
+    "Mens-shirts",
+    "Mens-watches",
+    "Mens-shoes",
+    "Mobile-accessories",
+    
   ];
 
   // Manejar cambio en select de ordenamiento
@@ -44,7 +50,7 @@ const BarraBusqueda = ({
       />
       <button
         onClick={manejarBusqueda}
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+        className="bg-blue-500 hover:bg-blue-600 text-black px-4 py-2 rounded"
       >
         Buscar
       </button>
